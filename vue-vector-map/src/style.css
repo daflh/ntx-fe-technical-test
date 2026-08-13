@@ -1,0 +1,29 @@
+:root {
+  color-scheme: light;
+  font: 15px/1.45 system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+#app {
+  height: 100dvh;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+}
+
+button {
+  font: inherit;
+}

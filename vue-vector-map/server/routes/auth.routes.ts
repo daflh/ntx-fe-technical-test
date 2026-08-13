@@ -1,0 +1,10 @@
+import { Router } from 'express'
+import * as authController from '../controllers/auth.controller.js'
+import { requireAuth } from '../middlewares/requireAuth.js'
+
+export const authRouter = Router()
+
+authRouter.post('/login', authController.login)
+authRouter.post('/refresh', authController.refresh)
+authRouter.post('/logout', authController.logout)
+authRouter.get('/me', requireAuth, authController.me)
