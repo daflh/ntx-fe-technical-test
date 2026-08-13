@@ -1,4 +1,4 @@
-export const PORT = Number(process.env.PORT ?? 4000)
+export const PORT = Number(process.env.PORT ?? 5170)
 
 // DEMO ONLY: hardcoded fallback secrets. A real deployment must supply these via env vars.
 export const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET ?? 'demo-access-secret-do-not-use-in-prod'

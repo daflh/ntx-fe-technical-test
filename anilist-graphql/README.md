@@ -32,7 +32,7 @@ pnpm dev
 `pnpm dev` runs **two processes together** (via `concurrently`):
 
 - the Vite dev server (frontend) at `http://localhost:5173`
-- the mock Express auth server (`server/`) at `http://localhost:4000`, proxied by Vite under `/api/*` so cookies are same-origin
+- the mock Express auth server (`server/`) at `http://localhost:5170`, proxied by Vite under `/api/*` so cookies are same-origin
 
 Open `http://localhost:5173`.
 
