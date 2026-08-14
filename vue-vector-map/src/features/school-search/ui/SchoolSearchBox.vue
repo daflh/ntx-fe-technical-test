@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import { useSchools } from '@/entities/school'
 import { useSchoolSearch } from '../model/useSchoolSearch'
 
+const { loading } = useSchools()
 const { query, results, hasQuery, pickResult } = useSchoolSearch()
 </script>
 
@@ -10,7 +12,8 @@ const { query, results, hasQuery, pickResult } = useSchoolSearch()
       v-model="query"
       type="search"
       class="school-search__input"
-      placeholder="Search school name or NPSN..."
+      :placeholder="loading ? 'Loading schools...' : 'Search school name or NPSN...'"
+      :disabled="loading"
       aria-label="Search school"
     />
 
@@ -56,6 +59,11 @@ const { query, results, hasQuery, pickResult } = useSchoolSearch()
   list-style: none;
   margin: 0;
   padding: 0.25rem;
+}
+
+.school-search__input:disabled {
+  background: #f1f5f9;
+  cursor: not-allowed;
 }
 
 .school-search__empty {
