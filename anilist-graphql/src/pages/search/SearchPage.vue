@@ -16,7 +16,7 @@ const { data, loading, error, isEmpty, canLoadMore, loadMore, retry, pageInfo } 
     </header>
 
     <p v-if="pageInfo && data.length > 0" class="search-page__count">
-      Showing {{ data.length }} of {{ pageInfo.total }} results
+      Showing {{ data.length }} result{{ data.length === 1 ? '' : 's' }}
     </p>
 
     <AnimeGrid :items="data" :loading="loading" :error="error" :show-empty="isEmpty" @retry="retry">
